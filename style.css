@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Базовий стиль секцій */
+.box {
+  position: relative;
+  background-color: #999;
+  border: 1px solid black;
+  padding: 60px 15px 15px;
+  margin: 10px;
+  float: left;
+  color: black;
+}
+
+/* Заголовок секції */
+.title {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border: 1px solid black;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+/* Індивідуальні кольори */
+.chicken .title {
+  background-color: #f5a9a9;
+}
+
+.beef .title {
+  background-color: #cc4444;
+  color: white;
+}
+
+.sushi .title {
+  background-color: #f3e29c;
+}
+
+/* Desktop (≥992px) */
+@media (min-width: 992px) {
+  .box {
+    width: 30%;
+  }
+}
+
+/* Tablet (768px–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .box {
+    width: 47%;
+  }
+
+  .box:nth-child(3) {
+    width: 100%;
+    clear: both;
+  }
+}
+
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+  .box {
+    width: 100%;
+    clear: both;
+  }
+}
